@@ -17,7 +17,6 @@ const GlobalStyles = () => {
 				.page {
 					position: relative;
 					color: white;
-					padding-bottom: 100px;
 				}
 
 				h4 {
@@ -27,6 +26,10 @@ const GlobalStyles = () => {
 				p, small, b, strong {
 					line-height: ${theme.typography.lineHeights.base};
 					letter-spacing: ${theme.typography.letterSpacings.tight}
+				}
+
+				ul > li:not(:last-child) {
+					margin-bottom: 15px;
 				}
 			`}
 		/>
