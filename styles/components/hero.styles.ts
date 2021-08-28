@@ -16,6 +16,15 @@ const heroStyles: StyleFunction = () => ({
 	".hero-content": {
 		paddingLeft: 120,
 		paddingRight: 120,
+
+		a: {
+			color: theme.colors.white,
+			zIndex: 10,
+
+			"&:hover": {
+				color: theme.colors.blueGray[400],
+			},
+		},
 	},
 
 	".hero-img": {
@@ -33,6 +42,7 @@ const heroStyles: StyleFunction = () => ({
 		left: 10,
 		top: 0,
 		zIndex: 0,
+		height: "100vh",
 
 		canvas: {
 			width: "100%",
