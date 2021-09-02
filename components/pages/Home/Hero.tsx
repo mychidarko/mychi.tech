@@ -27,7 +27,7 @@ const Hero = () => {
 						</a>
 					</div>
 				</div>
-				<img src="/mychi1.jpeg" alt="" className="hero-img w:40" />
+				<img src="/me.jpg" alt="" className="hero-img w:40" />
 				<Particles
 					className="hero-particles"
 					params={{
