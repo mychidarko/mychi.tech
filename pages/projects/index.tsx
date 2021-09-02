@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useGet } from "utils/hermes";
 import { Project } from "pages/api/@types/projects";
 
@@ -14,6 +14,7 @@ export default function Projects() {
 	const [response, loading, error] = useGet("/api/projects");
 	const [projects, setProjects] = useState<Record<string, Project[]>>({});
 	const [allProjects, setAllProjects] = useState<Record<string, Project[]>>({});
+	const [filter, setFilter] = useState(null);
 
 	useEffect(() => {
 		console.log(response?.data, "response");
@@ -40,10 +41,12 @@ export default function Projects() {
 
 		if (group === "all") {
 			setProjects(allProjects);
+			setFilter(null);
 			return;
 		}
 
 		setProjects({[group]: allProjects[group]});
+		setFilter(group);
 	};
 
 	return (
@@ -74,12 +77,17 @@ export default function Projects() {
 					{(!loading && projects) && (
 						<div className="projects__list">
 							<div className="flex project-group__tabs mb:_4">
-								<div className="project__helper" onClick={() => filterGroups("all")}>All</div>
+								<div
+									className={`project__filter cursor:pointer ${!filter && "-active"}`}
+									onClick={() => filterGroups("all")}
+								>
+									All
+								</div>
 								{Object.keys(allProjects).map((group) => (
 									<div
 										key={`h-${group}`}
 										onClick={() => filterGroups(group)}
-										className="project__helper ml:_2"
+										className={`project__filter cursor:pointer ml:_2 ${filter === group && "-active"}`}
 									>
 										{group}
 									</div>

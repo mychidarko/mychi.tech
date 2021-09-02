@@ -1,3 +1,4 @@
+import FadeIn from "react-fade-in";
 import { contentCard, projectCard } from "styles/components/cards.styles";
 import { ProjectGroupProps } from "./@types/ProjectGroup";
 
@@ -5,7 +6,7 @@ const ProjectGroup: React.FC<ProjectGroupProps> = ({ projects, group }) => {
 	return (
 		<div className="project-group__container">
 			<h2 className="project-group__title">{group}</h2>
-			<div className="project-group__list">
+			<FadeIn className="project-group__list">
 				{projects.map((project, index) => (
 					<div
 						key={index}
@@ -16,7 +17,7 @@ const ProjectGroup: React.FC<ProjectGroupProps> = ({ projects, group }) => {
 						<p>{project.description}</p>
 					</div>
 				))}
-			</div>
+			</FadeIn>
 		</div>
 	);
 };

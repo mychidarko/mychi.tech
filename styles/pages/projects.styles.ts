@@ -9,6 +9,12 @@ export const projectsStyles: StyleFunction = () => ({
 		paddingBottom: 50,
 		color: theme.colors.white,
 
+		".project__filter": {
+			"&.-active": {
+				color: theme.colors.red[400],
+			},
+		},
+
 		".projects__list": {
 			".project-group": {
 				"&__tabs": {},
@@ -27,6 +33,10 @@ export const projectsStyles: StyleFunction = () => ({
 					alignItems: "center",
 					flexWrap: "wrap",
 					marginBottom: 50,
+
+					"> div": {
+						width: "49%",
+					},
 				},
 			},
 		},

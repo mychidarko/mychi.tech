@@ -74,7 +74,7 @@ export const projectCard: StyleFunction = (background: string) => {
 	}
 
 	return {
-		width: "41%",
+		// width: "100%",
 		background: `linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.85)), url(${background})`,
 		height: 400,
 		backgroundPosition: "center",
