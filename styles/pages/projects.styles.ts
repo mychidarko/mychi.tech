@@ -28,10 +28,6 @@ export const projectsStyles: StyleFunction = () => ({
 					flexWrap: "wrap",
 					marginBottom: 50,
 				},
-
-				"&__project": {
-					width: "41%",
-				},
 			},
 		},
 	},
