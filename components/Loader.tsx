@@ -5,8 +5,8 @@ const Loader: React.FC<LoaderProps> = ({ text, height }) => {
 	return (
 		<div className="page-loader flex flex:center-all" style={{ height }}>
 			<div className="page-loader-label flex-col flex:center-all min-h:_10">
-				<ClipLoader />
-				<small className="mt:_1">{text || "Loading..."}</small>
+				<ClipLoader color="white" />
+				<small className="mt:_1" css={{ color: 'white' }}>{text || "Loading..."}</small>
 			</div>
 		</div>
 	);
