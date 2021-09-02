@@ -29,8 +29,6 @@ export default function Home() {
 				<Hero />
 
 				<div
-					data-aos="fade-in"
-					data-aos-delay="400"
 					css={{ paddingLeft: "calc(15% + 0px)", paddingRight: "calc(15% + 0px)" }}
 					className="mx:auto w:auto flex-col flex:center-all px-md-down:10 h:100vh"
 				>
@@ -107,7 +105,6 @@ export default function Home() {
 					className="contact__section flex flex:center-between h:100vh"
 				>
 					<div
-						data-aos="fade-in"
 						css={{...contentCard(), ...contactStyles() }}
 						className="px:_9 py:_10 w:100 flex-col flex:center-between"
 					>

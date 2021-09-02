@@ -28,6 +28,7 @@ export default function Projects() {
 				<div className="page__content">
 					{error && (
 						<div
+							data-aos="fade-in"
 							css={contentCard()}
 							className="px:_8 py:_8 mt:_10 blog__error"
 						>
@@ -44,6 +45,7 @@ export default function Projects() {
 					{(!loading && blogs) && (
 						<>
 							<div
+								data-aos="fade-in"
 								css={contentCard()}
 								className="px:_4 py:_4 mb:_10 flex blog__welcome"
 							>
@@ -58,10 +60,16 @@ export default function Projects() {
 								</p>
 							</div> */}
 							</div>
-							<div className="flex flex:center-between blog__list">
-								{blogs.map((blog) => (
+							<div
+								data-aos="fade-in"
+								data-aos-delay="400"
+								className="flex flex:center-between blog__list"
+							>
+								{blogs.map((blog, index) => (
 									<a
 										key={blog.id}
+										data-aos="fade-up"
+										data-aos-delay={`${index * 2}00`}
 										css={blogCard(blog.cover_image)}
 										className="blog__post cursor:pointer"
 										href={blog.url}

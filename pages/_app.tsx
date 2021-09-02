@@ -9,7 +9,9 @@ import "449.css/dist/449.css";
 
 function MyApp({ Component, pageProps }) {
 	useEffect(() => {
-		AOS.init();
+		AOS.init({
+			once: true,
+		});
 	});
 
 	return (
