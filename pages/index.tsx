@@ -5,11 +5,12 @@ import TopNav from "components/TopNav";
 import Hero from "components/pages/Home/Hero";
 import { contentCard } from "styles/components/cards.styles";
 import contactStyles from "styles/components/contact.styles";
-import { GitHub, Instagram, Linkedin, Twitter } from "react-feather";
+import { Airplay, GitHub, GitPullRequest, Instagram, Linkedin, PenTool, Smartphone, Twitter } from "react-feather";
+import { homeStyles } from "styles/pages/home.styles";
 
 export default function Home() {
 	return (
-		<div className="page">
+		<div className="page" css={homeStyles()}>
 			<Head>
 				<title>Michael Darko-Duodu</title>
 				<meta
@@ -24,7 +25,7 @@ export default function Home() {
 			</Head>
 
 			<main>
-				<TopNav />
+				<TopNav page="home" />
 				<Hero />
 
 				<div
@@ -33,27 +34,49 @@ export default function Home() {
 				>
 					<h4>What I do ✨</h4>
 
-					<div className="flex w:100 mt:_4">
+					<div className="flex flex:center-between w:100 mt:_2 skills">
 						<div
 							css={contentCard()}
-							className="px:_4 py:_4 w:100 pl:_5"
+							className="px:_4 py:_4 pl:_5 skill mt:_2"
 						>
-							<b>WEB DEV</b>
+							<b className="flex flex:center-start">
+								<Airplay />
+								<span className="ml:_1">FRONTEND</span>
+							</b>
 
-							<ul className="mt:_2">
+							<ul className="mt:_3 ml:_2">
 								<li>CSS, SASS, Emotion</li>
 								<li>JS, TS, jQuery, React, Vue</li>
-								<li>NodeJS, Express, Nest JS</li>
-								<li>PHP, Laravel, Slim, Leaf</li>
+								<li>Bootstrap, Materialize, MDL, AntD</li>
+								<li>Gulp, Grunt, Webpack, Parcel, Babel</li>
 							</ul>
 						</div>
 						<div
 							css={contentCard()}
-							className="px:_4 py:_4 w:100 ml:_2 pl:_5"
+							className="px:_4 py:_4 pl:_5 skill mt:_2"
 						>
-							<b>APP DEV</b>
+							<b className="flex flex:center-start">
+								<GitPullRequest />
+								<span className="ml:_1">BACKEND</span>
+							</b>
 
-							<ul className="mt:_2">
+							<ul className="mt:_3 ml:_2">
+								<li>NodeJS, Express, Nest JS</li>
+								<li>PHP, Laravel, Slim, Leaf</li>
+								<li>AWS, Azure, Render, Digital Ocean</li>
+								<li>MongoDB, MySQL</li>
+							</ul>
+						</div>
+						<div
+							css={contentCard()}
+							className="px:_4 py:_4 pl:_5 skill mt:_2"
+						>
+							<b className="flex flex:center-start">
+								<Smartphone />
+								<span className="ml:_1">APP DEV</span>
+							</b>
+
+							<ul className="mt:_3 ml:_2">
 								<li>Dart, Flutter</li>
 								<li>JavaScript, React Native, Ionic</li>
 								<li>JavaScript, Electron</li>
@@ -61,11 +84,14 @@ export default function Home() {
 						</div>
 						<div
 							css={contentCard()}
-							className="px:_4 py:_4 w:100 ml:_2 pl:_5"
+							className="px:_4 py:_4 pl:_5 skill mt:_2"
 						>
-							<b>DESIGN</b>
+							<b className="flex flex:center-start">
+								<PenTool />
+								<span className="ml:_1">DESIGN</span>
+							</b>
 
-							<ul className="mt:_2">
+							<ul className="mt:_3 ml:_2">
 								<li>Adobe Illustrator</li>
 								<li>Affinity Desgner</li>
 								<li>Figma</li>
