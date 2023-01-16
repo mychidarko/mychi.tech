@@ -20,5 +20,9 @@ export const blogStyles: StyleFunction = () => ({
 
 	".blog__list": {
 		flexWrap: "wrap",
+
+		".blog__post": {
+			marginBottom: 20,
+		},
 	},
 });

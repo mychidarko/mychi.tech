@@ -9,4 +9,14 @@ export const homeStyles: StyleFunction = () => ({
 			width: "calc(50% - 100px)",
 		},
 	},
+	[theme.breakpoints.md]: {
+		".skills__section": {
+			paddingLeft: "calc(15% + 0px)",
+			paddingRight: "calc(15% + 0px)",
+		},
+		".contact__section": {
+			paddingLeft: "calc(15% + 0px)",
+			paddingRight: "calc(15% + 0px)",
+		},
+	},
 });

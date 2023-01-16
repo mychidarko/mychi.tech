@@ -1,11 +1,7 @@
 import theme from "styles/theme";
 import { StyleFunction } from "./../@types/styles";
 
-const topNavStyles: StyleFunction = ({
-	active,
-	hidden,
-	link,
-}) => ({
+const topNavStyles: StyleFunction = ({ active, hidden }) => ({
 	zIndex: hidden ? -1 : 100,
 	paddingLeft: "15%",
 	paddingRight: "15%",
@@ -23,7 +19,39 @@ const topNavStyles: StyleFunction = ({
 		fontFamily: theme.typography.fonts.default,
 	},
 
+	"&.-phone": {
+		opacity: "1 !important",
+		zIndex: 100,
+
+		".topnav__links": {
+			position: "fixed",
+			top: 0,
+			right: 0,
+			flexDirection: "column",
+			height: "100vh",
+			background: theme.colors.primary,
+			borderLeft: `1px solid ${theme.colors.gray[700]}`,
+			display: "none",
+
+			div: {
+				marginLeft: "0px !important",
+			},
+
+			button: {
+				margin: "0px !important",
+			},
+		},
+	},
+
 	".topnav__links": {
+		justifyContent: "flex-start",
+		alignItems: "center",
+		// padding: "50px 50px 0px 30px",
+
+		// "> *": {
+		// 	marginBottom: 30,
+		// },
+
 		div: {
 			cursor: "pointer",
 
@@ -31,7 +59,7 @@ const topNavStyles: StyleFunction = ({
 				color: theme.colors.red[400],
 			},
 
-			"&:not(:first-child)": {
+			"&:not(:first-of-type)": {
 				marginLeft: 50,
 			},
 		},

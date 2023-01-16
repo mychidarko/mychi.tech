@@ -7,6 +7,14 @@ export const contentCard: StyleFunction = () => ({
 	borderRadius: 25,
 });
 
+export const heroContentCard: StyleFunction = () => ({
+	...contentCard(),
+
+	[theme.breakpoints.xs]: {
+		background: theme.colors.primary,
+	}
+});
+
 export const blogCard: StyleFunction = (background: string) => ({
 	background: `linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.85)), url(${background})`,
 	padding: 30,

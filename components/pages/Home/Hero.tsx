@@ -1,6 +1,6 @@
 import { GitHub, Instagram, Linkedin, Twitter } from 'react-feather';
 import Particles from 'react-particles-js';
-import { contentCard } from 'styles/components/cards.styles';
+import { heroContentCard } from 'styles/components/cards.styles';
 import heroStyles from "styles/components/hero.styles"
 
 const Hero = () => {
@@ -10,8 +10,8 @@ const Hero = () => {
 			data-aos="fade-in"
 			className="flex flex:center-between px-md-down:10"
 		>
-			<div className="flex flex:center-between h:100 hero-content" css={contentCard()}>
-				<div className="hero-text w:50">
+			<div className="flex flex:center-between h-md-up:100 hero-content" css={heroContentCard()}>
+				<div className="hero-text w-md-up:50">
 					<h4
 						className="mb:_2"
 						data-aos="fade-up"
@@ -26,13 +26,13 @@ const Hero = () => {
 						data-aos-delay="400"
 						className="flex flex:center-between w:40 mt:_4"
 					>
-						<a href="https://twitter.com/mychidarko" target="_blank">
+						<a href="https://twitter.com/mychidarko" className="pr-xs:_3" target="_blank">
 							<Twitter size={20} />
 						</a>
-						<a href="https://github.com/mychidarko" target="_blank">
+						<a href="https://github.com/mychidarko" className="pr-xs:_3" target="_blank">
 							<GitHub size={20} />
 						</a>
-						<a href="https://linkedin.com/in/mychidarko" target="_blank">
+						<a href="https://linkedin.com/in/mychidarko" className="pr-xs:_3" target="_blank">
 							<Linkedin size={20} />
 						</a>
 						<a href="https://instagram.com/mychidarko" target="_blank">
@@ -43,7 +43,7 @@ const Hero = () => {
 				<img
 					src="/me.jpg"
 					alt=""
-					className="hero-img w:40"
+					className="hero-img w-md-up:40 w-sm:33 w-xs:75 mb-xs:_5 h-sm:25 min-h:_10 min-w:_10"
 					data-aos="fade-in"
 					data-aos-delay="200"
 				/>

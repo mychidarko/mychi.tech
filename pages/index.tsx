@@ -29,15 +29,14 @@ export default function Home() {
 				<Hero />
 
 				<div
-					css={{ paddingLeft: "calc(15% + 0px)", paddingRight: "calc(15% + 0px)" }}
-					className="mx:auto w:auto flex-col flex:center-all px-md-down:10 h:100vh"
+					className="skills__section mx:auto w:auto flex-col flex:center-all px-md-down:10 h-md-up:100vh"
 				>
 					<h4>What I do ✨</h4>
 
-					<div className="flex flex:center-between w:100 mt:_2 skills">
+					<div className="d-md-up:flex flex:center-between w:100 mt:_2 skills">
 						<div
 							css={contentCard()}
-							className="px:_4 py:_4 pl:_5 skill mt:_2"
+							className="px:_4 py:_4 pl:_5 skill mt:_2 w-xs:70"
 						>
 							<b className="flex flex:center-start">
 								<Airplay />
@@ -53,7 +52,7 @@ export default function Home() {
 						</div>
 						<div
 							css={contentCard()}
-							className="px:_4 py:_4 pl:_5 skill mt:_2"
+							className="px:_4 py:_4 pl:_5 skill mt:_2 w-xs:70"
 						>
 							<b className="flex flex:center-start">
 								<GitPullRequest />
@@ -69,7 +68,7 @@ export default function Home() {
 						</div>
 						<div
 							css={contentCard()}
-							className="px:_4 py:_4 pl:_5 skill mt:_2"
+							className="px:_4 py:_4 pl:_5 skill mt:_2 w-xs:70"
 						>
 							<b className="flex flex:center-start">
 								<Smartphone />
@@ -84,7 +83,7 @@ export default function Home() {
 						</div>
 						<div
 							css={contentCard()}
-							className="px:_4 py:_4 pl:_5 skill mt:_2"
+							className="px:_4 py:_4 pl:_5 skill mt:_2 w-xs:70"
 						>
 							<b className="flex flex:center-start">
 								<PenTool />
@@ -101,16 +100,15 @@ export default function Home() {
 				</div>
 
 				<div
-					css={{ paddingLeft: "calc(15% + 0px)", paddingRight: "calc(15% + 0px)" }}
 					className="contact__section flex flex:center-between h:100vh"
 				>
 					<div
 						css={{...contentCard(), ...contactStyles() }}
-						className="px:_9 py:_10 w:100 flex-col flex:center-between"
+						className="px-md-up:_9 py-md-up:_10 w-md-up:100 ml-xs:10 px-xs:10 py-xs:_5 w-xs:60 flex-col flex:center-between"
 					>
-						<b>Connect with me <span>@mychidarko</span></b>
+						<b>Connect with me @mychidarko</b>
 
-						<div className="flex flex:center-between w:60 mt:_7">
+						<div className="flex flex:center-between w-md-up:60 w-xs:100 mt:_7">
 							<a href="https://twitter.com/mychidarko" target="_blank">
 								<Twitter size={45} />
 							</a>

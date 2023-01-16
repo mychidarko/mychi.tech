@@ -1,9 +1,10 @@
 const breakpoints = {
-	sm: "@media (min-width: 640px)",
-	md: "@media (min-width: 768px)",
-	lg: "@media (min-width: 1024px)",
-	xl: "@media (min-width: 1280px)",
-	xxl: "@media (min-width: 1536px)",
+	xs: "@media only screen and (max-width: 639px)",
+	sm: "@media only screen and (min-width: 640px)",
+	md: "@media only screen and (min-width: 768px)",
+	lg: "@media only screen and (min-width: 1024px)",
+	xl: "@media only screen and (min-width: 1280px)",
+	xxl: "@media only screen and (min-width: 1536px)",
 };
 
 export default breakpoints;

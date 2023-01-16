@@ -35,12 +35,28 @@ const GlobalStyles = () => {
 					margin-bottom: 15px;
 				}
 
+				@media only screen and (max-width: 768px) {
+					h4 {
+						font-size: 18px !important;
+					}
+					h4 span {
+						font-size: 24px !important;
+						font-weight: 700 !important;
+					}
+					p,
+					b,
+					i,
+					strong {
+						font-size: 16px !important;
+					}
+				}
+
 				#nprogress {
 					pointer-events: none;
 				}
 
 				#nprogress .bar {
-					background: ${theme.colors.white};
+					background: ${theme.colors.black};
 
 					position: fixed;
 					z-index: 1031;
@@ -57,8 +73,7 @@ const GlobalStyles = () => {
 					right: 0px;
 					width: 100px;
 					height: 100%;
-					box-shadow: 0 0 10px ${theme.colors.white},
-						0 0 5px ${theme.colors.white};
+					box-shadow: 0 0 10px ${theme.colors.black}, 0 0 5px ${theme.colors.black};
 					opacity: 1;
 
 					-webkit-transform: rotate(3deg) translate(0px, -4px);
@@ -80,8 +95,8 @@ const GlobalStyles = () => {
 					box-sizing: border-box;
 
 					border: solid 2px transparent;
-					border-top-color: ${theme.colors.white};
-					border-left-color: ${theme.colors.white};
+					border-top-color: ${theme.colors.black};
+					border-left-color: ${theme.colors.black};
 					border-radius: 50%;
 
 					-webkit-animation: nprogress-spinner 400ms linear infinite;
