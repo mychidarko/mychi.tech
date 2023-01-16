@@ -8,6 +8,11 @@ export const blogStyles: StyleFunction = () => ({
 		paddingRight: "15%",
 		paddingBottom: 50,
 		color: theme.colors.white,
+
+		[theme.breakpoints.mdDown]: {
+			paddingLeft: "10%",
+			paddingRight: "10%",
+		},
 	},
 
 	".blog__welcome": {

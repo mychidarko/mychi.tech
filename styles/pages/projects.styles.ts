@@ -9,6 +9,11 @@ export const projectsStyles: StyleFunction = () => ({
 		paddingBottom: 50,
 		color: theme.colors.white,
 
+		[theme.breakpoints.mdDown]: {
+			paddingLeft: "10%",
+			paddingRight: "10%",
+		},
+
 		".project__filter": {
 			"&.-active": {
 				color: theme.colors.red[400],
