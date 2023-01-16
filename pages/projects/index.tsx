@@ -54,7 +54,7 @@ export default function Projects() {
 			</Head>
 
 			<main>
-				<TopNav page="projects" />
+				<TopNav />
 
 				<div className="page__content">
 					{error && (

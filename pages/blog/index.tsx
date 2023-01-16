@@ -23,7 +23,7 @@ export default function Projects() {
 			</Head>
 
 			<main>
-				<TopNav page="blog" />
+				<TopNav />
 
 				<div className="page__content">
 					{error && (

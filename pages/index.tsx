@@ -25,7 +25,7 @@ export default function Home() {
 			</Head>
 
 			<main>
-				<TopNav page="home" />
+				<TopNav />
 				<Hero />
 
 				<div
