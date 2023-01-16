@@ -26,6 +26,27 @@ export default (req, res) => {
 			],
 		},
 		{
+			name: "GlassX",
+			image: "https://opengraph.githubassets.com/5d042ac0ac3c8592e46b1c17196c738b695e7d3d54eb3eb8c66fdfee21775650/mychidarko/glassx",
+			description:
+				"GlassX is a state management solution focused on simplicity and ease of use. It is built on top of the Context API and Hooks.",
+			group: "opensource",
+			tags: [
+				"opensource",
+				"boilerplate",
+				"javascript",
+				"typescript",
+				"scss",
+			],
+			links: [
+				{
+					name: "GitHub",
+					value: "https://github.com/mychidarko/glassx",
+				},
+			],
+			meta: [{ name: "First commit", value: "30th January, 2021" }],
+		},
+		{
 			name: "React Glass",
 			image: "https://opengraph.githubassets.com/5d042ac0ac3c8592e46b1c17196c738b695e7d3d54eb3eb8c66fdfee21775650/mychidarko/react-glass",
 			description:
