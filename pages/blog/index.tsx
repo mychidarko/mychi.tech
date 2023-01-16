@@ -14,8 +14,6 @@ export default function Projects() {
 	const [response, loading, error] = useGet("https://dev.to/api/articles?username=mychi_darko");
 	const blogs: BlogPost[] = response?.data;
 
-	console.log(blogs);
-
 	return (
 		<div css={blogStyles()}>
 			<Head>
@@ -90,8 +88,8 @@ export default function Projects() {
 											<p>{blog.description}</p>
 										</div>
 										<div className="tags mt:_4">
-											{blog.tag_list.map((tag) => (
-												<span>#{tag}</span>
+											{blog.tag_list.map((tag, index) => (
+												<span key={`${tag}-${index}`}>#{tag}</span>
 											))}
 										</div>
 									</a>

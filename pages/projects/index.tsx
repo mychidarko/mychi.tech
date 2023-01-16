@@ -35,8 +35,6 @@ export default function Projects() {
 	}, [response]);
 
 	const filterGroups = (group: string) => {
-		console.log("group", group);
-
 		if (group === "all") {
 			setProjects(allProjects);
 			setFilter(null);
@@ -81,9 +79,9 @@ export default function Projects() {
 								>
 									All
 								</div>
-								{Object.keys(allProjects).map((group) => (
+								{Object.keys(allProjects).map((group, index) => (
 									<div
-										key={`h-${group}`}
+										key={`h-${group}-${index}`}
 										onClick={() => filterGroups(group)}
 										className={`project__filter cursor:pointer ml:_2 ${filter === group && "-active"}`}
 									>

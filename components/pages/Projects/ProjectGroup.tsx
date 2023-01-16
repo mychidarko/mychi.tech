@@ -6,7 +6,7 @@ const ProjectGroup: React.FC<ProjectGroupProps> = ({ projects, group }) => {
 	return (
 		<div className="project-group__container">
 			<h2 className="project-group__title">{group}</h2>
-			<FadeIn className="project-group__list">
+			<FadeIn childClassName="w-md-down:100" className="project-group__list">
 				{projects.map((project, index) => (
 					<div
 						key={index}

@@ -23,6 +23,10 @@ export const blogStyles: StyleFunction = () => ({
 
 		".blog__post": {
 			marginBottom: 20,
+
+			[theme.breakpoints.mdDown]: {
+				width: "100%",
+			},
 		},
 	},
 });
