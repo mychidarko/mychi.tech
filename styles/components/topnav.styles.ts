@@ -3,11 +3,8 @@ import { StyleFunction } from "./../@types/styles";
 
 const topNavStyles: StyleFunction = ({ active, hidden }) => ({
 	zIndex: hidden ? -1 : 100,
-	paddingLeft: "15%",
-	paddingRight: "15%",
 	color: theme.colors.white,
-	// color: theme.colors.primary,
-	width: "calc(100vw - 30%)",
+	width: "100vw",
 	opacity: hidden ? 0 : 1,
 	boxShadow: active ? theme.shadows.md : "none",
 	background: active ? theme.colors.primary : theme.colors.transparent,
@@ -19,56 +16,25 @@ const topNavStyles: StyleFunction = ({ active, hidden }) => ({
 		fontFamily: theme.typography.fonts.default,
 	},
 
-	"&.-phone": {
-		opacity: "1 !important",
-		zIndex: 100,
+	".topnav__logo": {
+		paddingLeft: "10%",
 
-		".topnav__links": {
-			position: "fixed",
-			top: 0,
-			right: 0,
-			flexDirection: "column",
-			height: "100vh",
-			background: theme.colors.primary,
-			borderLeft: `1px solid ${theme.colors.gray[700]}`,
-			display: "none",
-
-			div: {
-				marginLeft: "0px !important",
-			},
-
-			button: {
-				margin: "0px !important",
-			},
+		[theme.breakpoints.md]: {
+			paddingLeft: "15%",
 		},
 	},
 
-	".topnav__links": {
-		justifyContent: "flex-start",
-		alignItems: "center",
-		// padding: "50px 50px 0px 30px",
+	".topnav__menu": {
+		paddingRight: "10%",
 
-		// "> *": {
-		// 	marginBottom: 30,
-		// },
-
-		div: {
-			cursor: "pointer",
-
-			"&.-active": {
-				color: theme.colors.red[400],
-			},
-
-			"&:not(:first-of-type)": {
-				marginLeft: 50,
-			},
+		[theme.breakpoints.md]: {
+			paddingRight: "15%",
 		},
+	},
 
-		button: {
-			borderRadius: 4,
-			border: `1px solid ${theme.colors.white}`,
-			background: theme.colors.white,
-			color: theme.colors.primary,
+	".topnav__link": {
+		"&.-active": {
+			color: theme.colors.red[400],
 		},
 	},
 });

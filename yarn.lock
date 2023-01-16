@@ -1928,6 +1928,11 @@ react-spinners@^0.10.6:
   dependencies:
     "@emotion/core" "^10.0.35"
 
+react-ts-modal@^1.5.9:
+  version "1.5.9"
+  resolved "https://registry.yarnpkg.com/react-ts-modal/-/react-ts-modal-1.5.9.tgz#bb13fc15c99e439b059c01d2695b15e9a86b6abe"
+  integrity sha512-gJKAMR1VOae1FkIzZKr7fWpUIA6M792yELAW/RqVfEXOdbS38QQyjOlQ13bWdEysfywa1L3b40mVqCzgRbh39g==
+
 react@17.0.2:
   version "17.0.2"
   resolved "https://registry.yarnpkg.com/react/-/react-17.0.2.tgz#d0b5cc516d29eb3eee383f75b62864cfb6800037"

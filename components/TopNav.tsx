@@ -1,8 +1,14 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
+import { Menu } from "react-feather";
+import Modal, { modal } from "react-ts-modal";
+import { contentCard } from "styles/components/cards.styles";
 import topNavStyles from "styles/components/topnav.styles";
+import theme from "styles/theme";
 import useTopNav from "utils/hooks/useTopNav";
 
-export default function TopNav({ page }) {
+export default function TopNav() {
+	const router = useRouter();
 	const { active, hidden } = useTopNav({
 		scrollEffects: true,
 		hideOnScroll: true,
@@ -18,23 +24,36 @@ export default function TopNav({ page }) {
 		<nav
 			css={topNavStyles({ active, hidden })}
 			className={`
-				flex:center-between py:_2 px-md-down:10
+				flex flex:center-between py:_2
 				position:fixed top:0 left:0 h:_5
 			`}
 		>
 			<div className="topnav__container flex flex:center-between w:100">
-				<h3>Mychi.</h3>
-				<div
-					className="topnav__links position-sm-down:fixed flex flex:center-between max-w:60"
-				>
+				<Link href="/">
+					<h3 className="topnav__logo cursor:pointer">Mychi.</h3>
+				</Link>
+				<Menu onClick={() => modal.show("nav-menu")} className="topnav__menu cursor:pointer" size={25} />
+			</div>
+
+			<Modal
+				closeButton={false}
+				name="nav-menu"
+				css={{ ".rjsm__modal": { background: theme.colors.blueGray[900], borderRadius: 24 } }}
+			>
+				<div className="px:10 py:_2">
 					{links.map((link) => (
 						<Link href={link.path} key={link.path}>
-							<div className={`topnav__link ${page === link.name.toLowerCase() ? '-active' : ''}`}>{link.name}</div>
+							<div
+								className={`topnav__link cursor:pointer my:_2 ${
+									router.pathname === link.path ? "-active" : ""
+								}`}
+							>
+								{link.name}
+							</div>
 						</Link>
 					))}
-					<button className="ml:_5 px:_2 py:_1">Send Email</button>
 				</div>
-			</div>
+			</Modal>
 		</nav>
 	);
 }
