@@ -11,7 +11,7 @@ const Hero = () => {
 			className="flex flex:center-between px-md-down:10"
 		>
 			<div className="flex flex:center-between h-md-up:100 hero-content" css={heroContentCard()}>
-				<div className="hero-text w-md-up:50">
+				<div className="hero-text w-lg-up:50">
 					<h4
 						className="mb:_2"
 						data-aos="fade-up"
@@ -43,7 +43,7 @@ const Hero = () => {
 				<img
 					src="/me.jpg"
 					alt=""
-					className="hero-img w-md-up:40 w-sm:33 w-xs:75 mb-xs:_5 h-sm:25 min-h:_10 min-w:_10"
+					className="hero-img w-md-up:40 w-sm:33 w-xs:75 mb-xs:_5 h-sm:25 min-h:_10 min-w:_10 d-md:none mb-sm-down:_5"
 					data-aos="fade-in"
 					data-aos-delay="200"
 				/>

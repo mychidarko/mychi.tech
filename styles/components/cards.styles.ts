@@ -10,8 +10,8 @@ export const contentCard: StyleFunction = () => ({
 export const heroContentCard: StyleFunction = () => ({
 	...contentCard(),
 
-	[theme.breakpoints.xs]: {
-		background: theme.colors.primary,
+	[theme.breakpoints.mdDown]: {
+		background: theme.colors.transparent,
 	}
 });
 

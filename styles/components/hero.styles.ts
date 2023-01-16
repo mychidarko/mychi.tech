@@ -24,7 +24,7 @@ const heroStyles: StyleFunction = () => ({
 	},
 
 	".hero-content": {
-		[theme.breakpoints.xs]: {
+		[theme.breakpoints.mdDown]: {
 			padding: 0,
 			flexDirection: "column-reverse",
 		},

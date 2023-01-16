@@ -17,8 +17,6 @@ export default function Projects() {
 	const [filter, setFilter] = useState(null);
 
 	useEffect(() => {
-		console.log(response?.data, "response");
-
 		if (response?.data?.status === "success") {
 			const works: Project[] = response.data.data;
 			const projectList: Record<string, Project[]> = {};
